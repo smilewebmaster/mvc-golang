@@ -1,2 +1,2 @@
-# EXAMPLE MICROSERVICE SERVICE WITH MVC PATTERN IN GOLANG
+# Example MicroService with MVC Pattern in Golang
 
