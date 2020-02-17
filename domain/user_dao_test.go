@@ -13,7 +13,7 @@ func TestGetUserNoUserFound(t *testing.T) {
 	assert.NotNil(t, err, "Expected an error when user id is 0")
 	assert.EqualValues(t, http.StatusNotFound, err.StatusCode, "we were expecting 404 status code")
 	assert.EqualValues(t, "not_found", err.Code)
-	assert.EqualValues(t, "user 0 does not exists", err.Message)
+	assert.EqualValues(t, "user 0 does not exist", err.Message)
 }
 
 func TestGetUserGoGood(t *testing.T) {

@@ -9,6 +9,8 @@ import (
 	"github.com/dmolina79/mvc-golang/services"
 )
 
+
+
 // GetUser ...
 func GetUser(resp http.ResponseWriter, req *http.Request) {
 	userID, err := strconv.ParseInt(req.URL.Query().Get("user_id"), 10, 64)
@@ -24,7 +26,7 @@ func GetUser(resp http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	user, apiError := services.GetUser(userID)
+	user, apiError := services.UsersService.GetUser(userID)
 
 	if apiError != nil {
 		resp.WriteHeader(apiError.StatusCode)
